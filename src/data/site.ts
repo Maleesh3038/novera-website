@@ -58,11 +58,6 @@ export const services = [
       "End-to-end support for Student Visas, Child Student Visas and Short-Term Study Visas, starting with a completely free initial consultation.",
   },
   {
-    title: "Visit Visa",
-    description:
-      "Support for tourism, family visits, business meetings, conferences, training and medical visits — including Standard Visitor, Marriage Visitor, Permitted Paid Engagement, and Transit visas.",
-  },
-  {
     title: "Air Ticket Assistance",
     description: "We help secure and book the right flights around your visa and course start dates.",
   },
@@ -109,3 +104,127 @@ export const journeyStages = [
 ] as const;
 
 export type JourneyStage = (typeof journeyStages)[number];
+
+/* ---------------- Visit Era ---------------- */
+
+export const visitServices = [
+  {
+    title: "Visit Visa Consultancy",
+    description:
+      "Support for tourism, family visits, business meetings, conferences, training and medical visits \u2014 including Standard Visitor, Marriage Visitor, Permitted Paid Engagement, and Transit visas.",
+  },
+  {
+    title: "Travel Documentation Support",
+    description:
+      "Help preparing invitation letters, sponsorship letters, itineraries and the supporting documents your visit visa application needs.",
+  },
+  {
+    title: "Air Ticket Assistance",
+    description: "We help secure and book the right flights around your travel and visa dates.",
+  },
+  {
+    title: "Accommodation Assistance",
+    description: "Guidance and referrals for safe, suitable accommodation for the length of your stay.",
+  },
+];
+
+export const visitWhyChooseUs = [
+  {
+    title: "Free Visit Visa Consultation",
+    description: "Every trip starts with an honest, no-obligation conversation about your travel plans.",
+  },
+  {
+    title: "Visa Eligibility Assessment",
+    description: "A clear review of your profile and purpose of travel against real visitor visa requirements.",
+  },
+  {
+    title: "Application Preparation & Documentation",
+    description: "Meticulous, compliance-first preparation of every form and supporting document.",
+  },
+  {
+    title: "Visa Application Lodgment",
+    description: "Accurate, on-time lodgment handled by professionals who know the process inside out.",
+  },
+  {
+    title: "Air Ticket & Accommodation Support",
+    description: "Support through to your flight booking and where you will stay while you are away.",
+  },
+];
+
+export const visitProcessSteps = [
+  {
+    title: "Purpose & Destination Review",
+    description: "We confirm the right visa category for your reason for travel.",
+  },
+  {
+    title: "Exclusive Personalized Counselling",
+    description: "One-on-one guidance tailored to your travel plans.",
+  },
+  {
+    title: "Assistance with Application Forms",
+    description: "Careful, accurate completion of every required form.",
+  },
+  {
+    title: "Document & Invitation Verification",
+    description: "We check invitation letters and supporting evidence meet requirements.",
+  },
+  {
+    title: "Personalized Lodgement of Visa Application",
+    description: "Prepared and lodged with full attention to compliance.",
+  },
+  {
+    title: "Pre-Departure Guidance",
+    description: "Travel, ticketing and accommodation support through to departure.",
+  },
+];
+
+export const visitCountryGuides = [
+  {
+    iso: "gb",
+    name: "United Kingdom",
+    visa: "Standard Visitor Visa",
+    description:
+      "For tourism, family visits, business meetings, conferences and short-term training \u2014 stays of up to 6 months.",
+  },
+  {
+    iso: "my",
+    name: "Malaysia",
+    visa: "Social Visit Pass",
+    description:
+      "For tourism, family visits and short courses under 30 days; extendable for approved purposes.",
+  },
+  {
+    iso: "ie",
+    name: "Ireland",
+    visa: "Short Stay 'C' Visa",
+    description: "For tourism, family visits and business trips of up to 90 days.",
+  },
+  {
+    iso: "de",
+    name: "Germany",
+    visa: "Schengen Visa (Type C)",
+    description:
+      "For tourism, family visits and business meetings across the Schengen Area, valid up to 90 days in any 180-day period.",
+  },
+  {
+    iso: "nl",
+    name: "Netherlands",
+    visa: "Schengen Visa (Type C)",
+    description:
+      "For tourism, family visits and business meetings across the Schengen Area, valid up to 90 days in any 180-day period.",
+  },
+  {
+    iso: "se",
+    name: "Sweden",
+    visa: "Schengen Visa (Type C)",
+    description:
+      "For tourism, family visits and business meetings across the Schengen Area, valid up to 90 days in any 180-day period.",
+  },
+  {
+    iso: "fr",
+    name: "France",
+    visa: "Schengen Visa (Type C)",
+    description:
+      "For tourism, family visits and business meetings across the Schengen Area, valid up to 90 days in any 180-day period.",
+  },
+];
