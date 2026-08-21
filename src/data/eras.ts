@@ -1,7 +1,7 @@
 export type Era = {
-  slug: "discover" | "learn" | "belong";
+  slug: "student" | "visit";
   name: string;
-  icon: "camera" | "book" | "heart";
+  icon: "cap" | "globe";
   headline: string;
   description: string;
   offerings: string[];
@@ -9,25 +9,12 @@ export type Era = {
 
 export const eras: Era[] = [
   {
-    slug: "discover",
-    name: "Discover Era",
-    icon: "camera",
-    headline: "Work, Skilled Migration & Business Pathways",
+    slug: "student",
+    name: "Student Era",
+    icon: "cap",
+    headline: "Study Abroad, Universities & Student Visas",
     description:
-      "The Discover Era is about new professional horizons — skilled migration, employer-sponsored work visas, and business or investor immigration routes for those ready to build a career or company abroad.",
-    offerings: [
-      "Skilled Worker & Employer-Sponsored Visas",
-      "Business & Investor Immigration",
-      "Visa Appeals & Rejection Reviews",
-    ],
-  },
-  {
-    slug: "learn",
-    name: "Learn Era",
-    icon: "book",
-    headline: "Study Abroad, Universities & Post-Study Work",
-    description:
-      "The Learn Era is Novera's core strength: student visa consultancy, university and course matching, and post-study work pathway planning across our study destinations.",
+      "The Student Era is Novera's core strength: student visa consultancy, university and course matching, and post-study work pathway planning across our study destinations.",
     offerings: [
       "Study Visa Consultancy (Student, Child Student & Short-Term)",
       "University & Course Matching",
@@ -35,16 +22,16 @@ export const eras: Era[] = [
     ],
   },
   {
-    slug: "belong",
-    name: "Belong Era",
-    icon: "heart",
-    headline: "Family, Settlement & Citizenship",
+    slug: "visit",
+    name: "Visit Era",
+    icon: "globe",
+    headline: "Travel, Tourist & Short-Stay Visas",
     description:
-      "The Belong Era brings families together and helps long-term residents put down permanent roots — sponsorship, permanent residency, and citizenship or settlement services.",
+      "The Visit Era covers everything for travellers heading abroad — tourist and visitor visa applications, travel documentation, and short-term stay planning.",
     offerings: [
-      "Family Sponsorship & Reunification",
-      "Permanent Residency",
-      "Citizenship & Settlement Services",
+      "Tourist & Visitor Visa Applications",
+      "Travel Documentation Support",
+      "Short-Term Stay & Extension Advice",
     ],
   },
 ];
