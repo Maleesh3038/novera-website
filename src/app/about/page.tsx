@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { CheckCircle2 } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
-import { team } from "@/data/team";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Novera International's story, mission, vision and the team behind the Discover, Learn and Belong Eras.",
+  description: "Learn about Novera International's story, mission and vision behind the Student and Visit Eras.",
 };
 
 const licenses = [
@@ -83,7 +82,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Why Eras, not Services"
             title="A journey, not a transaction"
-            description="Most consultancies sell you a 'service'. We think in terms of Eras — the chapters of your life we help you unlock: Discover, Learn, and Belong. Each Era carries its own goals, timelines and emotions, and our process is built around that reality rather than a rigid service catalogue."
+            description="Most consultancies sell you a 'service'. We think in terms of Eras — the chapters of your life we help you unlock: the Student Era and the Visit Era. Each Era carries its own goals, timelines and emotions, and our process is built around that reality rather than a rigid service catalogue."
           />
         </div>
       </section>
@@ -102,6 +101,11 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ---------------------------------------------------------------
+          TEAM SECTION - thawakalikawa hide karala. Attha team details
+          labunaam, meeke pahala tika uncomment karala src/data/team.ts
+          eke details update karanna.
+      ----------------------------------------------------------------
       <section className="section bg-mist-2">
         <div className="container-page">
           <SectionHeading eyebrow="Our Consultants" title="Meet the team behind your journey" />
@@ -122,6 +126,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      */}
 
       <section className="section">
         <div className="container-page">
