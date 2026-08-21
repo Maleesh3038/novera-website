@@ -6,7 +6,7 @@ import { Check, Pencil, X } from "lucide-react";
 type CaseRow = {
   id: string;
   client: string;
-  era: "Discover" | "Learn" | "Belong";
+  era: "Student" | "Visit";
   country: string;
   stage: string;
   deadline: string;
@@ -27,20 +27,20 @@ type DraftUpdate = {
 };
 
 const caseload: CaseRow[] = [
-  { id: "c1", client: "Ishara Perera", era: "Learn", country: "United Kingdom", stage: "Submitted", deadline: "3 days" },
-  { id: "c2", client: "Dinuka Wijesinghe", era: "Learn", country: "Australia", stage: "Documents", deadline: "5 days" },
-  { id: "c3", client: "Malith Gunasekara", era: "Belong", country: "United Kingdom", stage: "Matched", deadline: "12 days" },
-  { id: "c4", client: "Priyanka Fernando", era: "Discover", country: "Australia", stage: "Decision", deadline: "1 day" },
-  { id: "c5", client: "Nethmi Karunaratne", era: "Learn", country: "Singapore", stage: "Documents", deadline: "8 days" },
-  { id: "c6", client: "Oshadi Vidanapathirana", era: "Belong", country: "Netherlands", stage: "Submitted", deadline: "6 days" },
+  { id: "c1", client: "Ishara Perera", era: "Student", country: "United Kingdom", stage: "Submitted", deadline: "3 days" },
+  { id: "c2", client: "Dinuka Wijesinghe", era: "Student", country: "Australia", stage: "Documents", deadline: "5 days" },
+  { id: "c3", client: "Malith Gunasekara", era: "Visit", country: "United Kingdom", stage: "Matched", deadline: "12 days" },
+  { id: "c4", client: "Priyanka Fernando", era: "Visit", country: "Australia", stage: "Decision", deadline: "1 day" },
+  { id: "c5", client: "Nethmi Karunaratne", era: "Student", country: "Singapore", stage: "Documents", deadline: "8 days" },
+  { id: "c6", client: "Oshadi Vidanapathirana", era: "Visit", country: "Netherlands", stage: "Submitted", deadline: "6 days" },
 ];
 
 const leads: Lead[] = [
-  { id: "l1", name: "Kasun Abeysekara", interest: "UK · Learn Era", score: 92 },
-  { id: "l2", name: "Hiruni Wickramasinghe", interest: "Australia · Discover Era", score: 78 },
-  { id: "l3", name: "Sahan Mendis", interest: "Malaysia · Learn Era", score: 65 },
-  { id: "l4", name: "Anjali Rodrigo", interest: "Germany · Learn Era", score: 54 },
-  { id: "l5", name: "Ruwan Silva", interest: "New Zealand · Belong Era", score: 41 },
+  { id: "l1", name: "Kasun Abeysekara", interest: "UK · Student Era", score: 92 },
+  { id: "l2", name: "Hiruni Wickramasinghe", interest: "Australia · Visit Era", score: 78 },
+  { id: "l3", name: "Sahan Mendis", interest: "Malaysia · Student Era", score: 65 },
+  { id: "l4", name: "Anjali Rodrigo", interest: "Germany · Student Era", score: 54 },
+  { id: "l5", name: "Ruwan Silva", interest: "New Zealand · Visit Era", score: 41 },
 ];
 
 const initialDrafts: DraftUpdate[] = [
