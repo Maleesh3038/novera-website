@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Heart } from "lucide-react";
+import Flag from "@/components/Flag";
 import { destinations } from "@/data/destinations";
 
 export default function PortalDestinationsPage() {
@@ -33,7 +34,7 @@ export default function PortalDestinationsPage() {
         {destinations.map((d) => (
           <div key={d.slug} className="card p-5">
             <div className="flex items-start justify-between">
-              <span className="text-3xl">{d.flag}</span>
+              <Flag slug={d.slug} name={d.name} size="md" />
               <button onClick={() => toggleFavorite(d.slug)} aria-label={`Favorite ${d.name}`}>
                 <Heart className={`h-5 w-5 ${favorites.includes(d.slug) ? "fill-amber text-amber" : "text-text-soft"}`} />
               </button>
@@ -69,7 +70,7 @@ export default function PortalDestinationsPage() {
             <tbody>
               {compared.map((d) => (
                 <tr key={d.slug} className="border-b border-line last:border-0">
-                  <td className="py-3 pr-4 font-semibold text-navy">{d.flag} {d.name}</td>
+                  <td className="py-3 pr-4 font-semibold text-navy"><span className="flex items-center gap-2"><Flag slug={d.slug} name={d.name} />{d.name}</span></td>
                   <td className="py-3 pr-4 text-ink/80">{d.costBand}</td>
                   <td className="py-3 pr-4 text-ink/80">{d.timeline}</td>
                   <td className="py-3 pr-4 text-ink/80">{d.visaTypes[0]?.name}</td>
