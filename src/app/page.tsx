@@ -1,15 +1,14 @@
+import Link from "next/link";
 import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
 import FlightPath from "@/components/FlightPath";
 import SectionHeading from "@/components/SectionHeading";
 import StatTile from "@/components/StatTile";
 import DestinationCard from "@/components/DestinationCard";
 import EraCard from "@/components/EraCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import CountdownCard from "@/components/CountdownCard";
 import { LinkButton } from "@/components/Button";
 import { destinations } from "@/data/destinations";
 import { eras } from "@/data/eras";
-import { testimonials } from "@/data/testimonials";
 import { trustStats, journeyStages, siteInfo } from "@/data/site";
 
 export default function HomePage() {
@@ -66,7 +65,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container-page">
           <SectionHeading
-            eyebrow="9 Eras Destinations"
+            eyebrow="Our Destinations"
             title="Explore your destination"
             description="From the UK to Sweden, we cover every step of your study, work and settlement journey."
           />
@@ -90,10 +89,10 @@ export default function HomePage() {
         <div className="container-page">
           <SectionHeading
             eyebrow="Not services. Eras."
-            title="Three Eras, one journey"
-            description="Novera organizes everything around the three icons in our logo — camera, book, heart — representing the eras of your life we help you unlock."
+            title="Two Eras, one journey"
+            description="Novera organizes everything around the moments that matter most — whether you're heading off to study, or simply planning a trip."
           />
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
             {eras.map((era) => (
               <EraCard key={era.slug} era={era} />
             ))}
@@ -127,7 +126,7 @@ export default function HomePage() {
             <div className="rounded-2xl bg-navy-glass p-6 text-white">
               <p className="text-sm text-cyan">Nova says</p>
               <p className="mt-2 text-lg font-medium">
-                &ldquo;Based on your answers, the <span className="text-cyan">Learn Era</span> in{" "}
+                &ldquo;Based on your answers, the <span className="text-cyan">Student Era</span> in{" "}
                 <span className="text-cyan">New Zealand</span> looks like a strong match — affordable
                 tuition, generous work rights, and a clear post-study pathway.&rdquo;
               </p>
@@ -185,23 +184,6 @@ export default function HomePage() {
                 </li>
               ))}
             </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* Success stories */}
-      <section className="section">
-        <div className="container-page">
-          <SectionHeading eyebrow="Real Journeys" title="Success stories from our clients" />
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {testimonials.slice(0, 4).map((t) => (
-              <TestimonialCard key={t.id} testimonial={t} />
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <LinkButton href="/success-stories" variant="ghost">
-              View all success stories <ArrowRight className="h-4 w-4" />
-            </LinkButton>
           </div>
         </div>
       </section>
