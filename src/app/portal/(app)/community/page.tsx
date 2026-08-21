@@ -27,6 +27,15 @@ export default function PortalCommunityPage() {
         <h1 className="font-display text-3xl font-bold text-navy">Success stories feed</h1>
       </div>
 
+      {testimonials.length === 0 && (
+        <div className="card p-8 text-center">
+          <p className="text-sm font-semibold text-navy">No stories yet</p>
+          <p className="mt-2 text-sm text-text-soft">
+            Client success stories will appear here once they are published.
+          </p>
+        </div>
+      )}
+
       <div className="space-y-5">
         {testimonials.map((t) => (
           <div key={t.id} className="card p-6">
