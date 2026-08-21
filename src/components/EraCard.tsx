@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { Camera, BookOpen, Heart, ArrowRight, LucideIcon } from "lucide-react";
+import { GraduationCap, Globe, ArrowRight, LucideIcon } from "lucide-react";
 import { Era } from "@/data/eras";
 
 const icons: Record<Era["icon"], LucideIcon> = {
-  camera: Camera,
-  book: BookOpen,
-  heart: Heart,
+  cap: GraduationCap,
+  globe: Globe,
 };
 
 export default function EraCard({ era }: { era: Era }) {
