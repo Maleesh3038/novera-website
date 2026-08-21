@@ -7,9 +7,8 @@ const columns = [
   {
     title: "Eras",
     links: [
-      { href: "/eras/discover", label: "Discover Era" },
-      { href: "/eras/learn", label: "Learn Era" },
-      { href: "/eras/belong", label: "Belong Era" },
+      { href: "/eras/student", label: "Student Era" },
+      { href: "/eras/visit", label: "Visit Era" },
     ],
   },
   {
@@ -17,7 +16,6 @@ const columns = [
     links: [
       { href: "/destinations", label: "Destinations" },
       { href: "/about", label: "About Us" },
-      { href: "/success-stories", label: "Success Stories" },
       { href: "/resources", label: "Resources" },
       { href: "/nova", label: "Nova AI Tools" },
     ],
