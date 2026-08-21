@@ -9,7 +9,7 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    era: "Learn Era",
+    era: "Student Era",
     message: "",
   });
 
@@ -76,9 +76,8 @@ export default function ContactForm() {
             onChange={(e) => setForm((f) => ({ ...f, era: e.target.value }))}
             className="mt-2 w-full rounded-xl border border-line bg-white px-4 py-2.5 text-sm"
           >
-            <option>Discover Era</option>
-            <option>Learn Era</option>
-            <option>Belong Era</option>
+            <option>Student Era</option>
+            <option>Visit Era</option>
             <option>Not sure yet</option>
           </select>
         </label>
