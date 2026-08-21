@@ -14,14 +14,20 @@ const nav: NavItem[] = [
   {
     label: "Our Eras",
     children: [
-      { href: "/eras/discover", label: "Discover Era", desc: "Find the right country, course and university." },
-      { href: "/eras/learn", label: "Learn Era", desc: "Applications, offers, visas and pre-departure." },
-      { href: "/eras/belong", label: "Belong Era", desc: "Arrival, settling in and life after landing." },
+      {
+        href: "/eras/student",
+        label: "Student Era",
+        desc: "Study abroad, universities and student visas.",
+      },
+      {
+        href: "/eras/visit",
+        label: "Visit Era",
+        desc: "Travel, tourist and short-stay visas.",
+      },
     ],
   },
   { href: "/destinations", label: "Destinations" },
   { href: "/nova", label: "Nova AI" },
-  { href: "/success-stories", label: "Success Stories" },
   {
     label: "More",
     children: [
@@ -101,7 +107,9 @@ export default function Header() {
               >
                 <button
                   type="button"
-                  onClick={() => setOpenMenu((v) => (v === item.label ? null : item.label))}
+                  onClick={() =>
+                    setOpenMenu((v) => (v === item.label ? null : item.label))
+                  }
                   aria-expanded={openMenu === item.label}
                   className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
                     isActive(item) || openMenu === item.label
@@ -136,7 +144,9 @@ export default function Header() {
                             {child.label}
                             <ArrowRight className="h-3.5 w-3.5 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
                           </div>
-                          <p className="mt-0.5 text-xs leading-relaxed text-slate-500">{child.desc}</p>
+                          <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
+                            {child.desc}
+                          </p>
                         </div>
                       </Link>
                     ))}
