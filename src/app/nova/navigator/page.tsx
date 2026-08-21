@@ -4,11 +4,12 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 import { LinkButton } from "@/components/Button";
+import Flag from "@/components/Flag";
 import { destinations } from "@/data/destinations";
 import { siteInfo } from "@/data/site";
 
 type Answers = {
-  goal: "work" | "study" | "family" | "";
+  goal: "study" | "visit" | "";
   timeline: "asap" | "6-12" | "1-2yrs" | "";
   region: "uk-europe" | "anz" | "asia-me" | "no-preference" | "";
   budget: "under-2m" | "2-5m" | "5m-plus" | "";
@@ -18,9 +19,8 @@ type Answers = {
 const steps = ["Goal", "Timeline", "Region Interest", "Budget", "Qualifications", "Result"];
 
 const goalToEra: Record<string, { slug: string; name: string }> = {
-  work: { slug: "discover", name: "Discover Era" },
-  study: { slug: "learn", name: "Learn Era" },
-  family: { slug: "belong", name: "Belong Era" },
+  study: { slug: "student", name: "Student Era" },
+  visit: { slug: "visit", name: "Visit Era" },
 };
 
 function recommendCountry(answers: Answers) {
@@ -98,9 +98,8 @@ export default function NavigatorPage() {
               <QuizStep
                 title="What's your main goal?"
                 options={[
-                  { value: "work", label: "Work or skilled migration abroad" },
                   { value: "study", label: "Study at a university or college abroad" },
-                  { value: "family", label: "Join or sponsor family, or settle permanently" },
+                  { value: "visit", label: "Travel, visit family or a short business trip" },
                 ]}
                 value={answers.goal}
                 onChange={(v) => setAnswers((a) => ({ ...a, goal: v as Answers["goal"] }))}
@@ -133,7 +132,7 @@ export default function NavigatorPage() {
             )}
             {step === 3 && (
               <QuizStep
-                title="What's your approximate budget (per year)?"
+                title="What's your approximate budget (initially)?"
                 options={[
                   { value: "under-2m", label: "Under LKR 2M" },
                   { value: "2-5m", label: "LKR 2M – 5M" },
@@ -161,8 +160,10 @@ export default function NavigatorPage() {
                   <Sparkles className="h-5 w-5" />
                   <p className="text-sm font-semibold uppercase tracking-wide">Recommendation</p>
                 </div>
-                <h2 className="mt-3 font-display text-2xl font-bold text-navy">
-                  {era.name} · {country.flag} {country.name}
+                <h2 className="mt-3 flex flex-wrap items-center gap-2 font-display text-2xl font-bold text-navy">
+                  {era.name} <span className="text-text-soft">·</span>
+                  <Flag slug={country.slug} name={country.name} size="md" />
+                  {country.name}
                 </h2>
                 <p className="mt-4 text-sm text-text-soft">
                   Based on your goal, timeline, region interest and budget, the <strong>{era.name}</strong>{" "}
