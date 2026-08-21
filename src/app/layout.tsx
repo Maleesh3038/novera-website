@@ -29,8 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Novera International",
   },
   description:
-    "Novera International is a Sri Lanka-based study abroad and visa consultancy helping clients through the Discover, Learn and Belong Eras — work, study and family immigration to the UK, Australia, New Zealand, Dubai, Europe, Singapore and Malaysia.",
-  robots: { index: false, follow: false }, // TODO: real content dammata passe me line eka ain karanna
+    "Novera International is a Sri Lanka-based study abroad and visa consultancy — student visas and visit visas for the UK, Australia, New Zealand, Dubai, Europe, Singapore and Malaysia.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
